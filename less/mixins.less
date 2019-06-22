@@ -1,1 +1,27 @@
 // Mixins Here
+//Media Query for Phone viewpoint
+
+.button-mixin(@flex, @justify,@border-radius,@align,@width,@height,
+    @background,@color,@border,@cursor,@font-size) {
+	display: @flex;
+	justify-content: @justify;
+	border-radius: @border-radius;
+	align-items: @align;
+	width: @width;
+	height: @height;
+	background: @background;
+	color: @color;
+	border: @border;
+	cursor: @cursor;
+	font-size: @font-size;
+
+	&:hover {
+		background: lighten(@background, 99%);
+		color: darken(@color, 99%);
+	}
+}
+
+.btn {
+	.button-mixin(flex,center,6px,center,30%,13%,black,white, 1px solid black,
+        pointer, 1.75rem);
+}

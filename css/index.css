@@ -1,3 +1,20 @@
+.btn {
+  display: flex;
+  justify-content: center;
+  border-radius: 6px;
+  align-items: center;
+  width: 30%;
+  height: 13%;
+  background: black;
+  color: white;
+  border: 1px solid black;
+  cursor: pointer;
+  font-size: 1.75rem;
+}
+.btn:hover {
+  background: #fcfcfc;
+  color: #030303;
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -174,7 +191,7 @@ p {
   margin-bottom: 1%;
 }
 .intro nav a {
-  margin: 3rem;
+  margin: 2rem;
   text-decoration: none;
   font-size: 1.6rem;
   font-weight: bold;
@@ -218,6 +235,17 @@ footer {
   border-radius: 20px;
   height: 100%;
 }
+@media (max-width: 500px)  {
+  .home .space-images .blast {
+    width: 98%;
+  }
+  .home .space-images .sky {
+    display: none;
+  }
+  .home .space-images .launch {
+    display: none;
+  }
+}
 .home .visit-planets {
   padding: 15px;
 }
@@ -228,9 +256,10 @@ footer {
   margin-top: 13px;
 }
 .home .walk {
-  margin-top: 60px;
+  margin-top: 6%;
+  margin-bottom: 6%;
   border-top: 1px solid #dee2e6;
-  padding: 50px 60px;
+  padding: 4% 6%;
   display: flex;
   justify-content: center;
 }
@@ -251,4 +280,17 @@ footer {
   width: 100%;
   height: auto;
   border-radius: 10px;
+}
+@media (max-width: 500px)  {
+  .home .walk {
+    flex-direction: column-reverse;
+  }
+  .home .walk .walk-text {
+    margin-top: 5%;
+    width: 100%;
+  }
+  .home .walk .walk-img {
+    width: 100%;
+    margin-left: 0%;
+  }
 }
