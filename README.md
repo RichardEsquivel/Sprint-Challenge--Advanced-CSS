@@ -34,13 +34,26 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the difference between an adaptive website and a fully responsive website?
 
+One of the main differences is that with a responsive website responsive units like percentages in widths and margin and other spacing is used. You can also utilize max-width in a responsive page to control the maximum size of a container so as to not create spacing and proportion issues at larger sizes while using % to control to the sizes of other relative containers inside of the main container.
+
 2. Describe what it means to be mobile first vs desktop first.
+Mobile first web development is starting your initial design phases of a project with a mobile sized viewpoint in mind typically smaller than 500px or an appopriate smaller size and designing the page and all the elements and contents from the ground up with that viewpoint in mind. Later on you make modifications in the code of this initial design through @media queries to modify your initial design for larger non-mobile sizes. This is in reverse to a desktop first development cycle.
+
 
 3. What does `font-size: 62.5%` in the `html` tag do for us when using `rem` units?
 
+It takes the browser font size default of 16px and converts it through percentage into 10px. 62.5% * 16px = 10px. This gives us an easily scalable default font size of 10px which we can utilize with rem which creates a font size value that is relative to the font-size of the root element. In our case that root element is in the html tag.
+
 4. How would you describe preprocessing to someone new to CSS?
 
+Preprocessing takes very specific syntax for example LESS and a compiler in our case (Node) compiles or uses the syntax to create code formatting in the form of CSS which is used by the browser to style the elements and contents of the page indicated in the HTML. It's basically a way of writing out instructions which a compiler will then come along and turn into CSS which the browser uses to build the framework and style a page's contents.
+
+
 5. What is your favorite concept in preprocessing? What is the concept that gives you the most trouble?
+
+Parametic mixins I think are my favorite concept as they are like creating and declaring variables in other programming languages and utilizing the parametric mixin later is much like calling up a function later on in other coding languages and having it execute across the page and having it modular so you can utilize it in other places is very satisfying in practice.
+
+
 
 You are expected to be able to answer all these questions. Your responses contribute to your Sprint Challenge grade. Skipping this section *will* prevent you from passing this challenge.
 
