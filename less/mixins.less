@@ -1,5 +1,6 @@
 // Mixins Here
 //Media Query for Phone viewpoint
+@phone: ~"(max-width: 500px) ";
 
 .button-mixin(@flex, @justify,@border-radius,@align,@width,@height,
     @background,@color,@border,@cursor,@font-size) {
@@ -19,9 +20,20 @@
 		background: lighten(@background, 99%);
 		color: darken(@color, 99%);
 	}
+	&:active {
+		box-shadow: 0 5px #666;
+		transform: translateY(4px);
+	}
 }
 
 .btn {
-	.button-mixin(flex,center,6px,center,30%,13%,black,white, 1px solid black,
+	.button-mixin(flex,center,4px,center,30%,13%,black,white, 1px solid black,
         pointer, 1.75rem);
+}
+@media @phone {
+	.btn {
+		padding-top: 4%;
+		padding-bottom: 4%;
+		width: 100%;
+	}
 }
